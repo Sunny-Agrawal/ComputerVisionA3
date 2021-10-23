@@ -1,4 +1,4 @@
-function [M] = M-matrix(pixels, X)
+function [M] = M_matrix(pixels, X)
 %
 num = size(pixels, 2);
 pixels = [pixels; ones(1,num)];
