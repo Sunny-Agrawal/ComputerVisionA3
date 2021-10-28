@@ -1,0 +1,10 @@
+function [Coord3D] = Get3dCoords[Coord2D, K]
+%Given a set of 2D coordinates and intrinsic camera paramters K, get the
+%corresponding 3D coordinates (rela
+
+numPoints = size(Coord2D, 2);
+%Pad 2d coordinates with a row of 1s
+Coord2D = [Coord2D; ones(1,numPoints)];
+
+%Multiply by inverse of K
+Coord3D = inv(K
